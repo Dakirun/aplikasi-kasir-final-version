@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+</head>
+<title>CSS Website Layout</title>
+<style>
+* {
+	box-sizing: border-box;
+}
+body {
+	margin:0;
+}
+/*CSS untuk header */
+.header {
+	backround-color:#FFE4E1;
+	padding:10px;
+	text-align:center;
+}
+/*CSS untuk menu */
+.menu{
+	overflow: hidden;
+	background-color: #F08080;
+}
+/*untuk link menu */
+.menu a {
+float: left;
+display: black;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+/* pengaturan warnaa untuk hover */
+.menu a:hover {
+	background-color: #FFF0F5;
+	color:black;
+}
+/* Membuat 3 kolom */
+.kolom {
+	float: left;
+	padding: 10px;
+	text-align: justify;
+}
+/*kolom kanan daan kiri (kolom isi)*/
+.kolom.isi {
+	width: 25px;
+}
+/*kolom.tengah */
+.kolom.tengah {
+	width: 50px;
+}
+/*membersihkaan sisa float pada kolom */
+.baris:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+/*Responsive layout */
+@media screen and (max-width: 600px) {
+	.kolom.isi,.kolom.tengah {
+		width: 100px;
+}
+/* Style the footer */
+.footer {
+	background-color: #FFE4E1;
+	padding: 10px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<h1>header</h1>
+		<p>Biasanya berisilogo dan nama website</p>
+	</div>
+	<div class="menu">
+		<a href="#">Home</a>
+		<a href="#">Gallery</a>
+		<a href="#">About</a>
+	</div>
+	<div class="baris">
+		<div class="kolom isi">
+			<h2>Side</h2>
+			<p>Lorem ipsum dolorsit amet,consectetur adipiscing elit..</p>
+		</div>
+		<div class="kolom tengah">
+			<h2>Main Content</h2>
+			<p>Lorem ipsum dolor sit amet, consecturadipiscing elit.
+				Maecenas sit amet pretium urna.Vivamus venenatis velit nec neque
+				ultricies,eget elementum magna tristique.Quisque vehicula,risus
+				eget aliquam placerat,prus leo tincidunt eros,eget luctus quam
+				orci in velit.Praesent scelerisque tortor sed accumsan covallis.
+			</p>
+		</div>
+		<div class ="kolom isi">
+			<h2> Side</h2>
+			<p>Lorem ipsum dolor sit amet, consectur adipiscing elit..</p>
+		</div>
+	</div>
+	<div class="footer">
+		<p>Footer</p>
+	</div>
+</body>
+</html>
+
+
+
